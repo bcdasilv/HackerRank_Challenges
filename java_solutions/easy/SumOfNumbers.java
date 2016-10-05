@@ -1,4 +1,4 @@
-package Easy_Tests;
+package easy;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
