@@ -80,28 +80,28 @@ function printSinglyLinkedList(node, sep, ws) {
  *
  */
 
+// a -> b -> c -> d
+/**
+ * llist = a
+ * current = a
+ * previous = null
+ * next = b
+ * 
+ */
+
 function reverse(llist) {
-    if (!llist) return null;
-    if (!llist.next) return llist;
+    if (!llist || !llist.next) return llist;
     
-    let currentNode = llist.next;
-    let prevNode = llist; 
-    let nextNode;
-    if (!currentNode.next){
-        currentNode.next = prevNode;
-        prevNode.next = null;
-        return currentNode;    
+    let current = llist;
+    let previous = null;
+    while(current != null) {
+        let nextNode = current.next;
+        current.next = previous;
+        previous = current;
+        current = nextNode;
+        //nextNode = nextNode.next;
     }
-    nextNode = currentNode.next;
-    prevNode.next = null;
-    while(currentNode.next){
-        currentNode.next = prevNode;
-        prevNode = currentNode;
-        currentNode = nextNode;
-        nextNode = currentNode.next;
-    }
-    currentNode.next = prevNode;
-    return currentNode;
+    return previous;
 }
 
 function main() {
