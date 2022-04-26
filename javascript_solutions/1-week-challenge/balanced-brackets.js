@@ -23,12 +23,12 @@ function readLine() {
     return inputString[currentLine++];
 }
 
-    const OPEN_PARENTHESIS = "(";
-    const CLOSE_PARENTHESIS = ")";
-    const OPEN_CURLY = "{";
-    const CLOSE_CURLY = "}";
-    const OPEN_BRACKETS = "[";
-    const CLOSE_BRACKETS = "]";
+const OPEN_PARENTHESIS = "(";
+const CLOSE_PARENTHESIS = ")";
+const OPEN_CURLY = "{";
+const CLOSE_CURLY = "}";
+const OPEN_BRACKETS = "[";
+const CLOSE_BRACKETS = "]";
     
 function isOpen(char) {
     if (char === OPEN_BRACKETS || char === OPEN_PARENTHESIS || char === OPEN_CURLY) {
