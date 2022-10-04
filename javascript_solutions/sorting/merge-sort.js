@@ -43,12 +43,14 @@
          }
      }
      
+     //left array leftovers
      while( i < arr_left.length) {
          merged[k] = arr_left[i];
          k++;
          i++;
      }
      
+    //right array leftovers
      while( j < arr_right.length) {
          merged[k] = arr_right[j];
          k++;
