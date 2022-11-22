@@ -22,7 +22,7 @@ function search(state, solutions) {
 
 function solve() { 
     solutions = [];
-    state = new Set();
+    state = new Set();//could be another DS (e.g., array, map)
     search(state, solutions);
     return solutions;
 }
